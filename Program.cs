@@ -16,6 +16,6 @@ namespace ConsoleToWeb {
             {
                 webHost.UseStartup<Startup>();
             });
-            }
+            
     }
 }
