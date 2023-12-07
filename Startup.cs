@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace ConsoleToWeb
 {
@@ -53,19 +54,23 @@ namespace ConsoleToWeb
       app.Use(async (context, next) =>
       {
         await context.Response.WriteAsync("Hello this is a Test from Use II - I \n");
-        await context.Response.WriteAsync("Hello this is a Test from Use II - II \n");
-        await next();
+            Console.WriteLine("Hello this is a Test from Use II - I \n");
+          await context.Response.WriteAsync("Hello this is a Test from Use II - II \n");
+            Console.WriteLine("Hello this is a Test from Use II - II \n");
+          await next();
       });
 
       app.Use(async (context, next) =>
       {
         await next();
         await context.Response.WriteAsync("Request complete \n");
+            Console.WriteLine("Request complete \n");
       });
 
       app.Run(async context =>
         {
           await context.Response.WriteAsync("Hello this is a Run Test \n");
+            Console.WriteLine("Hello this is a Run Test \n");
         });
 
 
@@ -75,7 +80,8 @@ namespace ConsoleToWeb
       app.Use(async (context, next) =>
       {
         await context.Response.WriteAsync("Some new Vybz ... \n");
-        await next();
+            Console.WriteLine("Some new Vybz ... \n");
+          await next();
       });
   }
 }

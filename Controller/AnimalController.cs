@@ -24,11 +24,11 @@ namespace ConsoleToWeb.Controller
         new AnimalModel() {id=1,animalName="Dog" },
         new AnimalModel() {id=2,animalName="Pig" },
         new AnimalModel() {id=3,animalName="Rat" },
-      //new AnimalModel() {id=4,animalName="Hen" },
-      //new AnimalModel() {id=5,animalName="Cat" },
-      //new AnimalModel() {id=6, animalName="Goat"}
-      //new AnimalModel() {id=7, animalName="Lion"},
-      //new AnimalModel() {id=8, animalName="Cow"},
+      new AnimalModel() {id=4,animalName="Hen" },
+      new AnimalModel() {id=5,animalName="Cat" },
+      new AnimalModel() {id=6, animalName="Goat"},
+      new AnimalModel() {id=7, animalName="Lion"},
+      new AnimalModel() {id=8, animalName="Cow"},
       };
     }
 
